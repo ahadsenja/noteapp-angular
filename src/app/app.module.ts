@@ -8,12 +8,16 @@ import { AppComponent } from './app.component';
 
 import { NotesComponent } from './components/notes/notes.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NotesAddComponent } from './components/notes-add/notes-add.component';
+import { NotesEditComponent } from './components/notes-edit/notes-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotesComponent,
-    DashboardComponent
+    DashboardComponent,
+    NotesAddComponent,
+    NotesEditComponent
   ],
   imports: [
     BrowserModule,
