@@ -1,1 +1,26 @@
-<p>notes works!</p>
+<div>
+ <a class="btn btn-primary" routerLink="#">New Note</a>
+ <table class="table">
+  <thead>
+   <tr>
+    <td>ID</td>
+    <td>Title</td>
+    <td>Content</td>
+    <td>Action</td>
+   </tr>
+  </thead>
+
+  <tbody>
+   <tr *ngFor="let note of notes">
+    <td>{{ note.id }}</td>
+    <td>{{ note.title }}</td>
+    <td>{{ note.content }}</td>
+    <td>
+     <a class="btn btn-warning" routerLink="#">Edit</a>
+     <span style="padding-right: 4px;"></span>
+     <a class="btn btn-danger" routerLink="#">Delete</a>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+</div>
