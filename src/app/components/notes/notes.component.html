@@ -1,5 +1,5 @@
 <div>
- <a class="btn btn-primary" routerLink="#">New Note</a>
+ <a class="btn btn-primary btn-sm" routerLink="/notes/add">New Note</a>
  <table class="table">
   <thead>
    <tr>
@@ -16,9 +16,8 @@
     <td>{{ note.title }}</td>
     <td>{{ note.content }}</td>
     <td>
-     <a class="btn btn-warning" routerLink="#">Edit</a>
-     <span style="padding-right: 4px;"></span>
-     <a class="btn btn-danger" routerLink="#">Delete</a>
+     <a class="btn btn-warning btn-sm" routerLink="/notes/edit">Edit</a>
+     <a class="btn btn-danger btn-sm" routerLink="#" style="margin-left: 6px;">Delete</a>
     </td>
    </tr>
   </tbody>
