@@ -8,13 +8,17 @@ import { Note } from '../models/note';
   providedIn: 'root'
 })
 export class NoteService {
-  private URL = 'http://localhost:3000/notes';
+  BASE_URL = 'http://localhost:3000';
   
   notes: Note[] = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  onGetAll(): Observable<Note[]> {
-    return this.http.get<Note[]>(this.URL);
+  getAll(): Observable<Note[]> {
+    return this.httpClient.get<Note[]>(`${this.BASE_URL}/notes`);
+  }
+
+  create(note: Note): Observable<Note> {
+    return this.httpClient.post<Note>(`${this.BASE_URL}/notes`, note)
   }
 }
