@@ -15,11 +15,11 @@ export class NotesComponent implements OnInit {
   constructor(private noteService: NoteService) { }
 
   ngOnInit(): void {
-    this.getNotes();
+    this.onGetNotes();
   }
 
-  getNotes() {
-    this.noteService.onGetAll()
+  onGetNotes() {
+    this.noteService.getAll()
       .subscribe(
         notes => {
           this.notes = notes,
