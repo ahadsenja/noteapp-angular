@@ -1,19 +1,19 @@
 <div>
  <h3>Create New Notes</h3>
  <hr>
- <form action="">
+ <form class="form" (ngSubmit)="onCreateNote()">
   <div class="mb-3">
    <label for="" class="form-label">Title</label>
-   <input type="text" class="form-control">
+   <input type="text" name="title" class="form-control" [(ngModel)]="title">
   </div>
 
   <div class="mb-3">
    <label for="" class="form-label">Content</label>
-   <textarea type="text" class="form-control" rows="3"></textarea>
+   <textarea type="text" name="content" class="form-control" rows="3" [(ngModel)]="content"></textarea>
   </div>
 
   <div class="form-action">
-   <button class="btn btn-primary btn-sm" style="margin-right: 8px;">Save</button>
+   <button class="btn btn-primary btn-sm" type="submit" style="margin-right: 8px;">Save</button>
    <button class="btn btn-danger btn-sm" routerLink="/notes">Cancel</button>
   </div>
  </form>
