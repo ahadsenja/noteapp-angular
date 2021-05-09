@@ -13,7 +13,7 @@ export class NotesAddComponent implements OnInit {
 
   notes: Note[] = [];
 
-  id: number = 0;
+  _id: number = 0;
   title: string = '';
   content: string = '';
   submitted = false;
@@ -28,7 +28,7 @@ export class NotesAddComponent implements OnInit {
 
   onCreateNote(): void {
     const data = {
-      id: this.id,
+      _id: this._id,
       title: this.title,
       content: this.content
     }
