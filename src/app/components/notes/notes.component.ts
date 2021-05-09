@@ -31,4 +31,12 @@ export class NotesComponent implements OnInit {
       )
   }
 
+  onDelete(note: Note): void {
+    this.noteService.delete(note)
+      .subscribe(response => {
+        this.notes = this.notes.filter(u => u !== note)
+        console.log(response)
+      })
+  }
+
 }
