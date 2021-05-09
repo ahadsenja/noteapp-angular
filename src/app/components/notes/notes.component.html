@@ -12,12 +12,12 @@
 
   <tbody>
    <tr *ngFor="let note of notes">
-    <td>{{ note.id }}</td>
+    <td>{{ note._id }}</td>
     <td>{{ note.title }}</td>
     <td>{{ note.content }}</td>
     <td>
-     <a class="btn btn-warning btn-sm" routerLink="/notes/edit">Edit</a>
-     <a class="btn btn-danger btn-sm" routerLink="#" style="margin-left: 6px;">Delete</a>
+     <a class="btn btn-success btn-sm" routerLink="/notes/edit">Edit</a>
+     <button class="btn btn-danger btn-sm" (click)="onDelete(note)" style="margin-left: 6px;">Delete</button>
     </td>
    </tr>
   </tbody>
