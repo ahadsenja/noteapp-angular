@@ -21,4 +21,8 @@ export class NoteService {
   create(note: Note): Observable<Note> {
     return this.httpClient.post<Note>(`${this.BASE_URL}/notes`, note)
   }
+
+  delete(note: Note): Observable<Note> {
+    return this.httpClient.delete<Note>(`${this.BASE_URL}/notes/${note._id}`)
+  }
 }
