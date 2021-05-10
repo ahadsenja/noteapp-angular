@@ -1,19 +1,20 @@
 <div>
  <h3>Edit Notes</h3>
  <hr>
- <form action="">
+ <form class="form" (ngSubmit)="onUpdate()">
   <div class="mb-3">
    <label for="" class="form-label">Title</label>
-   <input type="text" class="form-control">
+   <input type="text" name="title" class="form-control" [(ngModel)]="note.title">
   </div>
 
   <div class="mb-3">
    <label for="" class="form-label">Content</label>
-   <textarea type="text" class="form-control" rows="3"></textarea>
+   <textarea type="text" name="content" class="form-control" rows="3" [(ngModel)]="note.content"></textarea>
   </div>
 
   <div class="form-action">
-   <button class="btn btn-primary" style="margin-right: 8px;">Update</button>
+   <button class="btn btn-primary" type="submit">Update</button>
+   <span style="margin-right: 8px;"></span>
    <button class="btn btn-danger" routerLink="/notes">Cancel</button>
   </div>
  </form>
