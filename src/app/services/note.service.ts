@@ -19,10 +19,18 @@ export class NoteService {
   }
 
   create(note: Note): Observable<Note> {
-    return this.httpClient.post<Note>(`${this.BASE_URL}/notes`, note)
+    return this.httpClient.post<Note>(`${this.BASE_URL}/notes`, note);
   }
 
   delete(note: Note): Observable<Note> {
-    return this.httpClient.delete<Note>(`${this.BASE_URL}/notes/${note._id}`)
+    return this.httpClient.delete<Note>(`${this.BASE_URL}/notes/${note._id}`);
+  }
+
+  update(_id: number, note: Note): Observable<Object> {
+    return this.httpClient.put(`${this.BASE_URL}/notes/${_id}`, note);
+  }
+
+  getNoteById(_id: number): Observable<Note> {
+    return this.httpClient.get<Note>(`${this.BASE_URL}/notes/${_id}`)
   }
 }
