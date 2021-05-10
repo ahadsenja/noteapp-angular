@@ -5,7 +5,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 This project is about simple CRUD application using Angular and NodeJs.
 
 The angular code is build by me,
-while node js code i clone from here `https://github.com/callicoder/node-easy-notes-app.git`.
+while node js code i clone from here [CalliCoder](https://github.com/callicoder/node-easy-notes-app). 
+This is the url repository `https://github.com/callicoder/node-easy-notes-app.git`.
 
 So, if you want to try to clone and run this project, you need to clone that nodejs project repository too.
 
